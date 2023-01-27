@@ -17,9 +17,14 @@ echo getUsername('GOGO') . '<br>';
 echo '<hr>';
 
 //參數不足
-function getTotal(float $price, int $num = 1): float
-{
+function getTotal (float $price, int $num = 1): float {
     return $price * $num;
-}
+};
 
 echo '總金額：' . getTotal(45) . ' 元<br>';
+
+
+$getTotal = function (float $price, int $num = 1): float {
+    return $price * $num;
+};
+echo "總金額：{$getTotal(45)}  元<br>";
