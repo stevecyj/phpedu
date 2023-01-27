@@ -22,8 +22,6 @@ function getTotal(float $price, int $num = 1): float
     return $price * $num;
 }
 
-;
-
 echo '總金額：' . getTotal(45) . ' 元<br>';
 
 
@@ -34,8 +32,9 @@ echo "總金額：{$getTotal(45)}  元<br>";
 
 echo '<hr>';
 //參數過多
-$sum = function (...$args) {
+$sum = function (...$args): float|int {
 //    var_dump($args);
     return array_sum($args);
 };
-echo $sum(4, 5, 6, 7, 8);
+$param = [4, 5, 6, 7, 8];
+echo $sum(...$param);
