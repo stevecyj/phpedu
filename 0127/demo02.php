@@ -37,4 +37,16 @@ $sum = function (...$args): float|int {
     return array_sum($args);
 };
 $param = [4, 5, 6, 7, 8];
-echo $sum(...$param);
+echo $sum(...$param) . '<br>';
+
+//filter,return array
+$arr = [33, 22, 4, 6, 53, 9, 64];
+function getItems($arr, $value): array
+{
+    return array_filter($arr, function ($item) use ($value) {
+        return $item > $value;
+    });
+}
+
+echo '<pre>' . print_r(getItems($arr, 30), true) . '</pre>';
+echo '[' . implode(',', getItems($arr, 30)) . ']';
