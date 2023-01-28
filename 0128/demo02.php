@@ -40,4 +40,30 @@ echo hello('teacher Lee', 12345) . '<br>';
 echo call_user_func('hello', 'teacher Kuo', 56789) . '<br>';
 
 $params = ['teacher Chung', 888888];
-echo call_user_func_array('hello', $params);
+echo call_user_func_array('hello', $params) . '<br>';
+
+//如果函數來自物件方法
+class Demo1
+{
+
+    function hello(string $name, float $salary): string
+    {
+        return 'Hello, ' . $name . '， 工資是： ' . $salary;
+    }
+}
+
+$obj = new Demo1;
+
+echo call_user_func_array([$obj, 'hello'], ['teacher NONO', 99999]) . '<br>';
+
+//來自類方法
+class Demo2
+{
+
+    public static function hello(string $name, float $salary): string
+    {
+        return 'Hello, ' . $name . '， 工資是： ' . $salary;
+    }
+}
+
+echo call_user_func_array(['Demo2', 'hello'], ['teacher DODO', 77777]) . '<br>';
