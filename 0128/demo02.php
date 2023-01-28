@@ -27,3 +27,17 @@ echo gettype($x) . '<br>';
 //資源
 $f = fopen('demo01.php', 'r');
 echo gettype($f) . '<br>';
+
+//callback
+function hello(string $name, $salary): string
+{
+    return 'Hello, ' . $name . '， 工資是： ' . $salary;
+}
+
+echo hello('teacher Lee', 12345) . '<br>';
+
+//call_user_func(函數，參數列表)
+echo call_user_func('hello', 'teacher Kuo', 56789) . '<br>';
+
+$params = ['teacher Chung', 888888];
+echo call_user_func_array('hello', $params);
