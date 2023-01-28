@@ -26,3 +26,10 @@ $hello1 = function ($name): string {
     return 'Hello, ' . $name;
 };
 echo $hello1($name) . '<br>';
+echo '<hr>';
+
+$hello = function () {
+    $username = 'Andrew';
+    return ['Hello world', $username];
+};
+echo $hello() [1] . '<hr>';
