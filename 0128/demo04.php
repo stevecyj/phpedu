@@ -12,3 +12,13 @@ while ($i < count($colors)) {
 }
 $list .= '</ul>';
 echo $list;
+echo '<hr>';
+
+//for loop
+$list1 = '<ul style="border: 1px solid chocolate">';
+for ($i = 0; $i < count($colors); $i++) {
+
+    $list1 .= "<li>{$colors[$i]}</li>";
+}
+$list1 .= '</ul>';
+echo $list1;
