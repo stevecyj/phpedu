@@ -32,4 +32,6 @@ $hello = function () {
     $username = 'Andrew';
     return ['Hello world', $username];
 };
-echo $hello() [1] . '<hr>';
+
+list($sayHi, $username) = $hello();
+echo "{$sayHi}! {$username}" . '<hr>';
