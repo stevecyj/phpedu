@@ -22,4 +22,6 @@ echo substr($str, -3, 3) . '<hr>';
 $img = 'banner.png';
 echo strstr($img, '.') . '<br>';
 echo ltrim(strstr($img, '.'), '.') . '<br>';
-echo strstr($img, '.', true);
+echo strstr($img, '.', true) . '<hr>';
+
+echo strpos($str, 'p', 1) . '<br>';
