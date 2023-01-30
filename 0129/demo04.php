@@ -24,4 +24,7 @@ echo strstr($img, '.') . '<br>';
 echo ltrim(strstr($img, '.'), '.') . '<br>';
 echo strstr($img, '.', true) . '<hr>';
 
-echo strpos($str, 'p', 1) . '<br>';
+echo strpos($str, 'p', 1) . '<hr>';
+
+$class = '\admin\controller\User';
+echo str_replace('\\', DIRECTORY_SEPARATOR, $class) . '.php';
