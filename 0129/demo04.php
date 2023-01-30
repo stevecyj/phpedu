@@ -13,3 +13,13 @@ $format = 'dsn=%s<br> username=%s<br> pw=%s<br>';
 $db = explode(';', $link);
 vprintf($format, $db);
 echo '<hr>';
+
+// 查詢
+$str = 'pneumonoultramicroscopicsilicovolcanoconiosis';
+echo substr($str, 0, 10) . '<br>';
+echo substr($str, -3, 3) . '<hr>';
+
+$img = 'banner.png';
+echo strstr($img, '.') . '<br>';
+echo ltrim(strstr($img, '.'), '.') . '<br>';
+echo strstr($img, '.', true);
